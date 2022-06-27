@@ -208,9 +208,9 @@
                     <label>2 Wheeler</label>
                 </value>
                 <value>
-                    <fullName>4 Wheeler</fullName>
+                    <fullName>41 Wheeler</fullName>
                     <default>false</default>
-                    <label>4 Wheeler</label>
+                    <label>41 Wheeler</label>
                 </value>
                 <value>
                     <fullName>6 Wheeler</fullName>
