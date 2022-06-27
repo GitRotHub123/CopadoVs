@@ -162,6 +162,25 @@
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
+    <compactLayouts>
+        <fullName>New_Compact</fullName>
+        <fields>Name</fields>
+        <fields>Contact__c</fields>
+        <label>New Compact</label>
+    </compactLayouts>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Service</relationshipLabel>
+        <relationshipName>Service</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
     <fields>
         <fullName>Case_Issue__c</fullName>
         <externalId>false</externalId>
@@ -280,4 +299,62 @@
             </valueSettings>
         </valueSet>
     </fields>
+    <validationRules>
+        <fullName>Provide_Company_Details</fullName>
+        <active>true</active>
+        <description>If vehicle type is selected. Company is required</description>
+        <errorConditionFormula>ISPICKVAL( Vehicle_Company__c , &apos;toyato&apos;)</errorConditionFormula>
+        <errorDisplayField>Case_Issue__c</errorDisplayField>
+        <errorMessage>Case Issue is mandatory</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Button_1</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Button 1</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>www.google.com</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Button_2</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Button 2</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://us05web.zoom.us/j/4054951963?pwd=N1pxK0NHVGNLb1JWTW45LzBQWllvdz09</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Button_3</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Button 3</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>https://us05web.zoom.us/j/4054951963?pwd=N1pxK0NHVGNLb1JWTW45LzBQWllvdz09</url>
+    </webLinks>
 </CustomObject>
